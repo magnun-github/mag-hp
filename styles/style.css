@@ -276,43 +276,13 @@
   transform: translate(-50%, calc(-50% + 20px));
   color: white;
   font-size: 25px;
-  z-index: 2;
+  z-index: 200;
   opacity: 0;
   transition: opacity 0.3s ease 1s, transform 0.3s ease 1s;
 }
 
-.hero__footer {
-  position: absolute;
-  left: 50%;
-  bottom: 20px;
-  transform: translateX(-50%);
-  z-index: 2;
-  height: 68px;
-  width: 22px;
-  overflow: hidden;
-}
-
-.hero__downarrow {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 6px;
-  animation-name: kf-arrow-anime;
-  animation-duration: 2s;
-  animation-timing-function: linear;
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
-  animation-direction: normal;
-  animation-fill-mode: forwards;
-}
-
-.hero__scrolltext {
-  position: absolute;
-  transform: rotate(90deg);
-  color: rgba(255, 255, 255, 0.7);
-  left: -8px;
-  top: 11px;
-  font-size: 1.2em;
+h2 {
+  text-align: center;
 }
 
 @keyframes kf-arrow-anime {
@@ -751,11 +721,11 @@ img {
   font-size: 14px;
 }
 
-.font-md, .popular__title {
+.font-md {
   font-size: 17px;
 }
 
-.font-lr, .houses__title {
+.font-lr {
   font-size: 17px;
 }
 
@@ -763,15 +733,15 @@ img {
   font-size: 25px;
 }
 
-.mb-sm, .about__sub, .about__img, .skill__sub, .skill__img, .houses__title, .popular__title {
+.mb-sm, .about__sub, .about__img, .skill__sub, .skill__img {
   margin-bottom: 16px !important;
 }
 
-.mb-lg, .about, .skill, .houses, .popular__btn {
+.mb-lg, .about, .skill {
   margin-bottom: 80px !important;
 }
 
-.pb-sm, .about__texts, .skill__texts, .popular__container {
+.pb-sm, .about__texts, .skill__texts {
   padding-bottom: 16px !important;
 }
 
@@ -779,7 +749,7 @@ img {
   padding-bottom: 80px !important;
 }
 
-.content-width, .header__inner, .home, .about, .skill, .houses, .popular__header, .popular__container, .footer {
+.content-width, .header__inner, .home, .about, .skill, .footer {
   width: 90%;
   margin: 0 auto;
   max-width: 1070px;
@@ -795,7 +765,7 @@ img {
   color: #535353;
 }
 
-.flex, .about__inner, .skill__inner, .houses__inner, .popular__container, .footer__nav, .footer__ul {
+.flex, .about__inner, .skill__inner, .footer__nav, .footer__ul {
   display: flex;
   flex-direction: column;
 }
@@ -819,6 +789,10 @@ main {
   position: relative;
   z-index: 10;
   transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.logo__img {
+  width: 1.5em !important;
 }
 
 .header {
@@ -874,6 +848,7 @@ main {
 .home {
   overflow: hidden;
   padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .home__title {
@@ -906,8 +881,10 @@ main {
   padding: 0;
 }
 
-.about {
+a.anchor {
+  display: block;
   padding-top: 100px;
+  margin-top: -100px;
 }
 
 .about__inner {
@@ -1003,51 +980,9 @@ main {
 }
 
 .skill__icon img {
-  width: 11%;
-  height: 11%;
-  padding-left: 3%;
-}
-
-.houses__btn {
-  text-align: center;
-  flex-basis: 100%;
-}
-
-.popular__inner {
-  position: relative;
-}
-
-.popular__inner::before {
-  display: block;
-  content: "";
-  position: absolute;
-  top: 10%;
-  left: 0;
-  width: 100%;
-  height: 90%;
-  background: #eaebe6;
-}
-
-.popular__container {
-  position: relative;
-  z-index: 2;
-}
-
-.popular__btn {
-  text-align: center;
-  flex-basis: 100%;
-}
-
-.popular__img {
-  height: 150px;
-  overflow: hidden;
-  margin-bottom: 5px;
-}
-
-.popular__img > img {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
+  width: 10%;
+  height: 10%;
+  margin-left: 5px;
 }
 
 .logo {
@@ -1157,37 +1092,15 @@ main {
   background-image: url(../images/twitter.svg);
 }
 
-.icon.fb::before {
-  background-image: url(../images/facebook.svg);
-}
-
-@media (min-width: 480px) {
-  /******************************************************************
-
-Stylesheet: 480px以上(スマホの横向き)のモニタで適用
-
-******************************************************************/
-}
-
 @media (min-width: 600px) {
   /******************************************************************
 
 Stylesheet: 600px以上のタブレットやモニタで適用
 
 ******************************************************************/
-  .flex, .about__inner, .skill__inner, .houses__inner, .popular__container, .footer__nav, .footer__ul {
+  .flex, .about__inner, .skill__inner, .footer__nav, .footer__ul {
     flex-direction: row;
     flex-wrap: wrap;
-  }
-  .houses__item {
-    flex-basis: 50%;
-    margin-bottom: 60px;
-  }
-  .popular__container {
-    justify-content: space-between;
-  }
-  .popular__item {
-    flex-basis: 47%;
   }
   .about__inner {
     padding: 50px;
@@ -1227,26 +1140,20 @@ Stylesheet: 960px以上のモニタで適用
   .font-sm, .sub-title {
     font-size: 16px;
   }
-  .font-md, .popular__title {
+  .font-md {
     font-size: 19px;
   }
-  .font-lr, .houses__title {
+  .font-lr {
     font-size: 23px;
   }
   .font-lg, .main-title {
     font-size: 36px;
   }
-  .mb-lg, .about, .skill, .houses, .popular__btn {
+  .mb-lg, .about, .skill {
     margin-bottom: 150px !important;
   }
   .pb-lg, .hero {
     padding-bottom: 150px !important;
-  }
-  .popular__item {
-    flex-basis: 25%;
-  }
-  .popular__img {
-    height: 335px;
   }
   .about__img {
     height: 400px;
@@ -1291,9 +1198,6 @@ Stylesheet: 1280px以上のモニタで適用
   }
   .skill__inner {
     padding: 50px 150px;
-  }
-  .popular__item {
-    flex-basis: 23%;
   }
   .side {
     display: block;

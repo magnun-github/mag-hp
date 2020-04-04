@@ -52,39 +52,9 @@
     opacity: 0;
     transition: opacity 0.3s ease 1s, transform 0.3s ease 1s;
   }
-
-  // &__footer {
-  //   position: absolute;
-  //   left: 50%;
-  //   bottom: 20px;
-  //   transform: translateX(-50%);
-  //   z-index: 200;
-  //   height: 68px;
-  //   width: 22px;
-  //   overflow: hidden;
-  // }
-
-  // &__downarrow {
-  //   position: absolute;
-  //   left: 0;
-  //   bottom: 0;
-  //   width: 6px;
-  //   @include animation(
-  //     $name: kf-arrow-anime,
-  //     $iteration-count: infinite,
-  //     $duration: 2s,
-  //     $timing-function: linear
-  //   );
-  // }
-
-  // &__scrolltext {
-  //   position: absolute;
-  //   transform: rotate(90deg);
-  //   color: rgba(255, 255, 255, 0.7);
-  //   left: -8px;
-  //   top: 11px;
-  //   font-size: 1.2em;
-  // }
+}
+h2 {
+  text-align: center;
 }
 
 @keyframes kf-arrow-anime {

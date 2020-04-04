@@ -74,6 +74,10 @@ main {
   transition: transform 0.5s, box-shadow 0.5s;
 }
 
+.logo__img {
+  width: 1.5em !important;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -128,6 +132,7 @@ main {
 .home {
   overflow: hidden;
   padding-top: $navHeight;
+  padding-bottom: 100px;
   @extend .content-width;
 
   &__title {
@@ -170,7 +175,7 @@ a.anchor {
 .about {
   @extend .content-width;
   @extend .mb-lg;
-  padding-top: $navHeight;
+  // padding-top: $navHeight;
 
   &__inner {
     @extend .flex;
@@ -233,7 +238,6 @@ a.anchor {
 .skill {
   @extend .content-width;
   @extend .mb-lg;
-  padding-top: $navHeight;
 
   &__inner {
     @extend .flex;
@@ -294,8 +298,9 @@ a.anchor {
   }
 
   &__icon img {
-    width: 50%;
-    height: 50%;
+    width: 10%;
+    height: 10%;
+    margin-left: 5px;
   }
 }
 
@@ -401,11 +406,11 @@ a.anchor {
       background-image: url(../images/twitter.svg);
     }
   }
-  &.fb{
-    &::before {
-      background-image: url(../images/facebook.svg);
-    }
-  }
+  // &.fb{
+  //   &::before {
+  //     background-image: url(../images/facebook.svg);
+  //   }
+  // }
 }
 
 
